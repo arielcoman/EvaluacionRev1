@@ -317,7 +317,7 @@ select {
   border-radius: 0.6em;
   color: #817b8f;
   outline: none;
-  appearance: button;
+  -webkit-appearance: button;
   overflow: hidden;
   line-height: 1.15;
 }
@@ -325,6 +325,9 @@ select option {
   font-size: 1em;
 }
 
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) {
+  /* STYLES GO HERE */
+}
 @media (max-width: 1023px) {
   body {
     grid-template-rows: auto;
@@ -392,7 +395,6 @@ select option {
     width: 100%;
     flex-direction: row;
     align-items: center;
-    height: auto;
     margin-bottom: 1.5em;
     justify-content: flex-end;
   }
