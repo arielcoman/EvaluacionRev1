@@ -1,0 +1,274 @@
+$base-color: #524c61;
+
+*{
+    font-family:  'Roboto', sans-serif;
+    font-size: 10px;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: $base-color;
+    
+}
+
+body{
+    display:grid;
+	grid-template-columns: 15% 70% 15%;
+	grid-template-rows: 55vh auto;
+	grid-template-areas:'hd hd hd'
+					
+}
+
+#backImage{
+    background-image: url("../images/esB.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+    grid-area: hd;
+}
+#busqueda{
+    @extend %displayF-center;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+.generalBusqueda{
+    @extend %displayF-center;
+    width: 100%;
+    height: auto;
+    max-width: 1200px; 
+
+}
+
+.tituloBusqueda{
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+
+}
+
+.OpcionesVerdaderas{
+    @extend %displayF-column;
+    width: 100%;
+    padding-top: 1.5%;
+}
+.contBusqueda{
+    @extend %displayF-center ;
+   // display: flex;
+    width: 100%;
+    padding: 1% 2% 2% 2%;
+    border-radius: 6px;
+    background-color: white;
+    max-height: 60%;
+    flex-wrap: wrap;
+    //justify-content:center;
+     h1{
+        font-weight: 400;
+        font-size: 2.7em;
+        line-height: 1.2;
+        margin: 0 0 .5em;
+     }
+ }
+
+.opcionesBusqueda{
+	@extend %displayF-100W;
+	justify-content: flex-start;
+  
+    input[type="radio"]{
+        display: none;
+        + .labelBefore::before{
+            @extend %before;
+        
+        }
+        
+        
+    }
+    input[type="radio"]:checked+.labelBefore::before{
+        @extend %before-Chequed
+    }
+
+}
+
+.opcion{
+    @extend  %displayF-row;
+    width: 20%;
+    label{
+        
+        @extend  %displayF-100W;
+        align-items: center;
+        cursor: pointer;
+        align-self: center;
+        margin: 0;
+    }
+   
+    span{
+        font-size: 1.2em;
+        margin-left: 2%;
+        color: #817b8f;
+    }
+    
+}
+
+
+
+
+.form{
+	border-radius: 10px;
+
+    @extend   %displayF-100W;
+    
+}
+.formBusqueda{
+    @extend    %in-displayF-row;
+    justify-content: space-between;
+    margin-top:1em;
+    width: 100%;
+  
+
+}
+.opcionesLugares{
+    @extend %Var-opcionesInput;
+    flex: 1 1 420px;
+    
+    
+
+}
+
+.opcionesVarias{
+    @extend %Var-opcionesInput;
+    flex: 1;
+    max-width: 210px;
+}
+
+
+.inputLugares{
+    @extend   %var-input;
+    
+	width:40%;
+
+    
+}
+.inputFechas{
+    @extend   %var-input;
+    width: 39%;
+
+}
+
+.inputPAsajeros{
+    @extend   %var-input;
+    width: 100%;
+
+
+}
+
+.inputPasajeros-Mobile{
+    display:none;
+}
+
+
+.containerFechas{
+    @extend %displayF-column;
+    width: 100%;
+    height: 100%;
+}
+
+.cuadroFechas{
+	@extend %displayF-row;
+	width: 100%;
+    align-items: center;
+    height: 100%;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+
+    .arrow{
+        transition: .5s ease;
+        display: flex;
+        svg{
+            width: 24px;
+            fill: #817b8f;
+        }
+        
+    }
+}
+
+.inputIdaYVuelta, .inputIdaYVuelta2{
+    width:42%;
+    height: 100%;
+    input{
+        border: 0;
+    }
+}
+.flatpickr-inputRange{
+    padding-left: 10%;
+}
+
+#secondRangeInput{
+    margin-left: 10%;
+}
+
+.inputsearch{
+	display: flex;
+    width: 8%;
+    align-items: flex-end;
+    padding-left: 0.2%;
+}
+
+.searchButton {
+	border:0;
+	background-color: #d32f2f;
+	width: 100%;
+	height: 70%;
+    cursor: pointer;
+    color: white;
+    border-radius: 6px;
+    font-size: 1.6em;
+    
+
+   
+}
+
+.modal {
+ @extend %modal;
+     }
+
+.pasaContainer{
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: left;
+    text-align: -webkit-left;
+    padding-bottom: 0.8em;
+    white-space: nowrap;
+        .cantPasajeroslabel{
+            font-size: 1.2em;
+            color:$base-color;
+            margin-bottom: 0;
+            user-select: none;
+            height: 2.5em;
+            letter-spacing: 0.1em;
+        }
+        .cantPasajeros{
+            width: 100%;
+            height: 3.6em;
+            position: relative;
+        
+        } 
+        .cantPasajeros::before{
+            content: "\2C6";
+            position: absolute;
+            right: 1em;
+            text-align: center;
+            font-size: 2em;
+            line-height: 1;
+            color: #2196f3;
+            pointer-events: none;
+            transform: rotate(180deg);
+        }        
+      
+    }  
+
+
+@import 'declaraciones';
+
+@import 'responsive';

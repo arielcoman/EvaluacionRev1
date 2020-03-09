@@ -1,0 +1,134 @@
+%displayF-column {
+    display: flex;
+    flex-direction: column;
+  }
+  %in-displayF-column {
+    display: inline-flex;
+    flex-direction: column;
+  }
+
+  %in-displayF-row {
+    display: inline-flex;
+    flex-direction: row;
+  }
+
+  %displayF-row {
+    display: flex;
+    flex-direction: row;
+  }
+  %displayF-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  %displayF-100W {
+    display: flex;
+width: 100%;
+  }
+
+  %Var-opcionesInput{
+    display: inline-flex;
+	justify-content: space-between;
+	
+  }
+
+  %before{
+    content: "";
+            background:
+            #fff;
+            border-radius: 100%;
+            border: 2px solid
+            #817b8f;
+            display: inline-block;
+            width: 1.5em;
+            height: 1.5em;
+            position: relative;
+            vertical-align: top;
+            cursor: pointer;
+            text-align: center;
+            transition: all .25s ease;
+  }
+  %before-Chequed{
+    background-color:
+    #2196f3;
+    box-shadow: inset 0 0 0 2px
+    #fff;
+    border: 2px solid
+    #2196f3;
+  }
+
+  %modal{
+    z-index: 999;
+    display: none; /* Hidden by default */      
+    background-color: white;
+    width: 100%; /* Full width */ 
+    padding: 0.5em 1em;
+    border-radius: 2px;
+    box-shadow: 0 2px 2px rgba(0,0,0,.12);
+    pointer-events: auto;
+  }
+ 
+  %var-input{
+    background-color: white;
+    @extend %in-displayF-column;
+    padding: 0% 2% 0 0;
+    border-radius: 9px;
+    margin-right:0.2%;
+   
+  }
+
+  // declaraciones globales
+
+  input{
+	border: 1px solid #ddd;
+        border-radius: 6px;
+        padding: 5%;
+        font-size: 1.6em;
+        height: 100%;
+        width: 100%;
+	
+}
+
+button{
+	border:0;
+	background-color: transparent;
+	color: black;
+	font-size:1.3em;
+	font-weight: 400;
+    cursor: pointer;
+    &-:hover{
+        font-weight: bolder;
+    
+    }
+}
+label{
+    font-size: 1.2em;
+    color: grey;
+    margin-bottom: 0.5em;	
+    
+}
+
+select{
+  width: 100%;
+  border: 1px solid #817b8f;
+  font-size: 1.6em;
+  padding: 2%;
+  border-radius: 0.6em;
+ 
+  color:
+#817b8f;
+outline: none;
+-webkit-appearance: button;
+  overflow: hidden;
+  line-height: 1.15;
+   option{
+     font-size: 1em;
+   }
+  
+
+}
+
+
+

@@ -1,0 +1,210 @@
+@mixin dislpayF{
+    display: flex;
+    width: 100%;
+}
+
+// aspecto para celulares/TABles
+@media  (max-width: 1023px) {
+
+    body{
+        grid-template-rows: auto;
+    }
+    #backImage{
+        background-image: none;
+       
+    }
+    .contBusqueda{
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .tituloBusqueda{
+        @include dislpayF;
+        min-height: 5.6em;
+        justify-content: flex-start;
+        h1{
+            font-size: 2.4em;
+            font-weight: 300;
+            color:#817b8f;
+        }
+    }
+    
+    .OpcionesVerdaderas{
+        max-width: 500px;
+        padding: 1.8em 1.2em;
+        .opcion{
+            width: 40%;
+        }
+    }
+    .opcionesBusqueda{
+        width: 100%;
+    }
+    
+    .formBusqueda{
+        flex-direction: column;
+    }
+    .labelBefore{
+        font-size: 1em;
+    }
+    .opcionesLugares{
+        flex-direction: column;
+        flex: 0;
+    }
+    .opcionesVarias{
+        @include dislpayF;
+      flex:0;
+      max-width: 100%;
+    }
+    .inputFechas{
+        width: 100%;
+        height: auto;
+    }
+    .inputLugares, .containerFechas{
+        width: 100%;
+        flex-direction: row;
+        align-items: center;
+        height: auto;
+        margin-bottom: 1.5em;
+        justify-content: flex-end;
+        input{
+            flex-wrap: wrap;
+            height: auto;
+            padding:0.6em;
+            font-size: 1.6em;
+            flex-basis: 73%;
+        }
+        label{
+            padding-right: 1em;
+            font-size: 1.3em;
+        }
+
+    }
+    .cuadroFechas{
+        width: 73%;
+        height: auto;
+    }
+    .inputPAsajeros{
+        display: none;
+    }
+    .inputPasajeros-Mobile{
+        @include dislpayF;
+        background-color: white;
+       // display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 1.5em 0;
+        //width: 100%;
+        label{
+            align-self: center;
+            margin: 10% 3% 3% 3%;
+            }
+        }        
+    .modal-content{
+       // display: flex;
+        flex-direction: row;
+        justify-content:flex-end;
+        //width: 100%;
+        @include dislpayF;
+    }
+    .datosPasajeros{
+        display: flex;
+        width: 77%;
+        flex-direction: row;
+        justify-content: flex-end;
+      
+        .cantPasajeroslabel{
+            font-size: 1.1em;
+            letter-spacing: 0;
+        }
+        select{
+            width: 92%;
+            height: 2.25em;
+            padding: 0.5em;
+            }
+        }
+        
+    .inputsearch{
+        width: 100%;
+        .searchButton{
+            padding: 1em;
+            height: 100%;
+        }
+    }    
+    .claseContainer{
+        display: flex;
+        flex-direction: row;
+    }
+    .containerGeneralOP{
+        display: flex;
+        justify-content: center;
+        flex: 1 1 100%;
+
+        .opcionesClases{
+            display: flex;
+            width: 75%;
+            justify-content: space-between;
+            margin: 1.5em 0;
+            label{
+                margin: 0;
+            }
+        }
+    }
+   
+
+ }
+
+// esto es necesario para que el modal del input pasajeros y clase quede bien según la manera que resolvi yo. 
+ 
+@media (min-width:1023px) and (max-width: 1279px) {
+    .inputLugares, .inputFechas,.inputPAsajeros {
+        height: 5vh;
+    }
+    .inputLugares{
+        width: 30%;
+    }
+}
+
+ 
+@media (min-width:1279px) and (max-width: 1919px) {
+    .inputLugares, .inputFechas,.inputPAsajeros {
+        height: 10vh;
+    }
+    
+}
+
+@media (min-width:1919px) and (max-width: 1921px) {
+    .inputLugares, .inputFechas,.inputPAsajeros {
+        height: 7vh;
+    }
+   
+}
+
+@media (min-width:1922px) {
+    .inputLugares, .inputFechas,.inputPAsajeros {
+        height: 3vh;
+    }
+    
+}
+
+// aspecto landscape
+@media only screen 
+and (min-width:1023px) 
+and (max-width: 1279px) 
+and (-webkit-min-device-pixel-ratio: 2)
+and (orientation: landscape) {
+    .inputLugares, .inputFechas,.inputPAsajeros {
+        height: 8vh;
+    }
+}
+
+
+  @media only screen 
+  and (min-width:1279px) 
+  and (max-width: 1919px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) { 
+    .inputLugares, .inputFechas,.inputPAsajeros {
+        height: 7vh;
+    }
+
+  }
