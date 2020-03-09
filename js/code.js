@@ -65,11 +65,17 @@ $(".dropdown-toggle").click(function(){
   toggleElement($(".modal"));
 });
 
+
 function toggleElement(element){
   element.toggle();
 };
 
 
+$(document).click(function(e){
+  if(!$(e.target).closest('.dropdown-toggle').length){
+      $(".modal").hide();
+  }
+})
 
 
 
