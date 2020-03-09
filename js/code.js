@@ -1,6 +1,6 @@
 
 
-flatpickr($(".flatpickr-inputRange"), {
+let calendar= flatpickr($(".flatpickr-inputRange"), {
   locale: "es", 
   dateFormat: "d-m-Y",
   minDate: "today",
@@ -9,7 +9,7 @@ flatpickr($(".flatpickr-inputRange"), {
   
 });
 
-flatpickr($(".flatpickr-inputSoloIda"), {
+let calendar2 =flatpickr($(".flatpickr-inputSoloIda"), {
   locale: "es", 
   dateFormat: "d-m-Y",
   minDate: "today",
@@ -17,7 +17,8 @@ flatpickr($(".flatpickr-inputSoloIda"), {
   
   
 });
-
+calendar.destroy();
+calendar2.destroy();
 
 let botonIda = document.querySelector('.btnSoloIda');
 
