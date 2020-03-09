@@ -36,7 +36,7 @@ and (max-device-width : 568px) { /* STYLES GO HERE */}
     .OpcionesVerdaderas{
         max-width: 500px;
         padding: 1.8em 1.2em;
-        flex-direction: column;
+        
         .opcion{
             width: 40%;
         }
@@ -47,6 +47,7 @@ and (max-device-width : 568px) { /* STYLES GO HERE */}
     
     .formBusqueda{
         flex-direction: column;
+        display: flex;
     }
     .labelBefore{
         font-size: 1em;

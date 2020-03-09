@@ -357,7 +357,6 @@ select option {
   .OpcionesVerdaderas {
     max-width: 500px;
     padding: 1.8em 1.2em;
-    flex-direction: column;
   }
   .OpcionesVerdaderas .opcion {
     width: 40%;
@@ -369,6 +368,7 @@ select option {
 
   .formBusqueda {
     flex-direction: column;
+    display: flex;
   }
 
   .labelBefore {
