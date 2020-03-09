@@ -1,24 +1,19 @@
-
-
-let calendar= flatpickr($(".flatpickr-inputRange"), {
+ flatpickr($(".inputRange"), {
   locale: "es", 
   dateFormat: "d-m-Y",
   minDate: "today",
-
+  disableMobile: "true",
   plugins:plugin = [new rangePlugin({ input: "#secondRangeInput"})]
   
 });
-
-let calendar2 =flatpickr($(".flatpickr-inputSoloIda"), {
+flatpickr($(".inputSoloIda"), {
   locale: "es", 
   dateFormat: "d-m-Y",
   minDate: "today",
   mode:'single',
-  
+  disableMobile: "true",
   
 });
-calendar.destroy();
-calendar2.destroy();
 
 let botonIda = document.querySelector('.btnSoloIda');
 
@@ -31,8 +26,8 @@ botonIda.onclick= function(){
 
   
   document.querySelector('.arrow').style.display="none";
-  document.querySelector('.flatpickr-inputRange').style.display="none";
-  document.querySelector('.flatpickr-inputSoloIda').style.display="flex";
+  document.querySelector('.inputRange').style.display="none";
+  document.querySelector('.inputSoloIda').style.display="flex";
   document.querySelector('#secondRangeInput').style.display="none";
   document.querySelector('.inputIdaYVuelta2').style.display="none";
   document.querySelector('.inputIdaYVuelta').style.width="100%";
@@ -44,8 +39,8 @@ botonIdaYVuelta.onclick= function(){
 
   
   document.querySelector('.arrow').style.display="flex";
-  document.querySelector('.flatpickr-inputRange').style.display="flex";
-  document.querySelector('.flatpickr-inputSoloIda').style.display="none";
+  document.querySelector('.inputRange').style.display="flex";
+  document.querySelector('.inputSoloIda').style.display="none";
   document.querySelector('#secondRangeInput').style.display="flex";
   document.querySelector('.inputIdaYVuelta2').style.display="flex";
   document.querySelector('.inputIdaYVuelta').style.width="42%";
