@@ -196,7 +196,7 @@ body {
 .pasaContainer .cantPasajeros::before {
   content: "ˆ";
   position: absolute;
-  right: 1em;
+  right: 0.5em;
   text-align: center;
   font-size: 2em;
   line-height: 1;
@@ -317,7 +317,7 @@ select {
   border-radius: 0.6em;
   color: #817b8f;
   outline: none;
-  -webkit-appearance: button;
+  appearance: button;
   overflow: hidden;
   line-height: 1.15;
 }
